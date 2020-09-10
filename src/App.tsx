@@ -10,7 +10,6 @@ function App() {
           console.log("Congrats for building your first reusbale component");
         }}
         type="button"
-        buttonSize="btn--medium"
         buttonStyles="btn--success--solid"
         buttonLabel="Click me"
       ></Button>

@@ -1,13 +1,14 @@
 import React from "react";
 import "../styles/button.css";
 import "../sizes/button.css";
+import { useBreakpoint } from "../hooks/useBreakpoint";
 
 interface buttonProps {
   buttonLabel: string;
   type: "button" | "reset" | "submit";
   onClick: () => {} | void;
   buttonStyles: string;
-  buttonSize: string;
+  buttonSize?: string;
   disabled?: boolean;
 }
 
@@ -30,10 +31,9 @@ export const Button = (props: buttonProps) => {
     : styles[0];
 
   let checkButtonLabel = props.buttonLabel;
-
-  const checkButtonSize = sizes.includes(props.buttonSize)
-    ? props.buttonSize
-    : sizes[0];
+  let buttonSize: string = "";
+  const breakPoint = useBreakpoint();
+  breakPoint == "lg" ? (buttonSize = "btn--large") : (buttonSize = sizes[0]);
 
   props.disabled
     ? (checkButtonStyle = "btn--primary--disabled") &&
@@ -44,7 +44,7 @@ export const Button = (props: buttonProps) => {
     <button
       onClick={props.onClick}
       type={props.type}
-      className={`btn ${checkButtonSize} ${checkButtonStyle}`}
+      className={`btn ${buttonSize} ${checkButtonStyle}`}
       disabled={props.disabled}
     >
       {checkButtonLabel}
