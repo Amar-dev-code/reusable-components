@@ -1,10 +1,12 @@
 import React from "react";
+
 import "../styles/button.css";
 import "../sizes/button.css";
 import { useBreakpoint } from "../hooks/useBreakpoint";
+import search from "../search.png";
 
 interface buttonProps {
-  buttonLabel: string;
+  buttonLabel: any;
   type: "button" | "reset" | "submit";
   onClick: () => {} | void;
   buttonStyles: string;
@@ -23,7 +25,7 @@ const styles = [
   "btn--warning--outline",
 ];
 
-const sizes = ["btn--medium", "btn--large"];
+const sizes = ["btn--medium", "btn--large", ".btn--small"];
 
 export const Button = (props: buttonProps) => {
   let checkButtonStyle = styles.includes(props.buttonStyles)
@@ -33,7 +35,7 @@ export const Button = (props: buttonProps) => {
   let checkButtonLabel = props.buttonLabel;
   let buttonSize: string = "";
   const breakPoint = useBreakpoint();
-  breakPoint == "lg" ? (buttonSize = "btn--large") : (buttonSize = sizes[0]);
+  breakPoint == "lg" ? (buttonSize = "btn--large") : (buttonSize = sizes[2]);
 
   props.disabled
     ? (checkButtonStyle = "btn--primary--disabled") &&
@@ -47,7 +49,7 @@ export const Button = (props: buttonProps) => {
       className={`btn ${buttonSize} ${checkButtonStyle}`}
       disabled={props.disabled}
     >
-      {checkButtonLabel}
+      {<img src={search} alt="fireSpot" />}
     </button>
   );
 };
