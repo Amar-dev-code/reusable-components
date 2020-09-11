@@ -1,9 +1,10 @@
 import React from "react";
+
 import "../styles/button.css";
 import "../sizes/button.css";
 import { useBreakpoint } from "../hooks/useBreakpoint";
 import search from "../search.png";
-import dustbin from "../dustbin(2).svg";
+
 interface buttonProps {
   buttonLabel: any;
   type: "button" | "reset" | "submit";
