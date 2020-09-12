@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../styles/spinner.css";
-import spinner from "../images/loading.gif";
+const spinner = require("../images/loading.gif");
 
 interface spinnerProps {
   isLoading: boolean;
