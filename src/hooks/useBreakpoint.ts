@@ -7,9 +7,7 @@ const getDeviceConfig = (width: number) => {
     return "sm";
   } else if (width >= 720 && width < 1024) {
     return "md";
-  } else if (width >= 1024) {
-    return "lg";
-  }
+  } else return "lg";
 };
 
 export const useBreakpoint = () => {
