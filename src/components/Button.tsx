@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/button.css";
 import "../sizes/button.css";
 import { useBreakpoint } from "../hooks/useBreakpoint";
-import search from "../images/search.png";
+//import search from "../search.png";
 
 interface buttonProps {
   buttonLabel: any;
@@ -49,7 +49,7 @@ export const Button = (props: buttonProps) => {
       className={`btn ${buttonSize} ${checkButtonStyle}`}
       disabled={props.disabled}
     >
-      {<img src={search} alt="fireSpot" />}
+      {checkButtonLabel}
     </button>
   );
 };
