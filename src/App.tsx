@@ -2,6 +2,8 @@ import React from "react";
 
 import "./App.css";
 import { Button } from "./components/Button";
+import { Spinner } from "./components/Spinner";
+
 function App() {
   return (
     <div className="App">
@@ -13,6 +15,7 @@ function App() {
         buttonStyles="btn--success--solid"
         buttonLabel="Click me"
       ></Button>
+      <Spinner isLoading={true}></Spinner>
     </div>
   );
 }
