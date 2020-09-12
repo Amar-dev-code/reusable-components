@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/button.css";
 import "../sizes/button.css";
 import { useBreakpoint } from "../hooks/useBreakpoint";
-import search from "../search.png";
+import search from "../images/search.png";
 
 interface buttonProps {
   buttonLabel: any;
