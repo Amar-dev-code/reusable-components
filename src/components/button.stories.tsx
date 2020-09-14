@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 import { Button } from "./Button";
-const search = require("../search.png");
+const search = require("../images/search.png");
 
 storiesOf("Button", module)
   .add("Primary", () => (
