@@ -1,6 +1,8 @@
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 import { Button } from "./Button";
+const search = require("../images/search.png");
+
 storiesOf("Button", module)
   .add("Primary", () => (
     <Button
@@ -30,6 +32,6 @@ storiesOf("Button", module)
       }}
       type="button"
       buttonStyles="btn--success--solid"
-      buttonLabel={<img src="../search.png" alt="search"></img>}
+      buttonLabel={<img src={search} alt="search"></img>}
     ></Button>
   ));
