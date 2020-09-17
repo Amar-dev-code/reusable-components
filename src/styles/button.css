@@ -55,7 +55,6 @@
   background-color: var(--warning);
   color: var(--white);
   border: 2px;
-
   text-decoration: none;
 }
 .btn--danger--outline {
