@@ -6,6 +6,7 @@ import { useBreakpoint } from "../hooks/useBreakpoint";
 const search = require("../images/search.png");
 
 interface buttonProps {
+  href?: string;
   buttonLabel: any;
   type: "button" | "reset" | "submit";
   onClick: () => {} | void;
@@ -35,7 +36,7 @@ export const Button = (props: buttonProps) => {
   let checkButtonLabel = props.buttonLabel;
   let buttonSize: string = "";
   const breakPoint = useBreakpoint();
-  breakPoint == "lg" ? (buttonSize = "btn--large") : (buttonSize = sizes[2]);
+  breakPoint == "lg" ? (buttonSize = "btn--medium") : (buttonSize = sizes[2]);
 
   props.disabled
     ? (checkButtonStyle = "btn--primary--disabled") &&
@@ -43,13 +44,13 @@ export const Button = (props: buttonProps) => {
     : (checkButtonStyle = styles[0]);
 
   return (
-    <button
+    <a
+      href={props.href}
       onClick={props.onClick}
       type={props.type}
       className={`btn ${buttonSize} ${checkButtonStyle}`}
-      disabled={props.disabled}
     >
       {checkButtonLabel}
-    </button>
+    </a>
   );
 };

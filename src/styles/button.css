@@ -24,6 +24,7 @@
   background-color: var(--primary);
   color: var(--white);
   border: none;
+  text-decoration: none;
 }
 .btn--warning--solid {
   background-color: var(--warning);
@@ -38,7 +39,7 @@
 .btn--success--solid {
   background-color: var(--success);
   color: var(--black);
-  border: none;
+  border: 10px;
 }
 .btn--primary--outline {
   background-color: var(--primary);
@@ -64,6 +65,7 @@
 .btn--primary--disabled {
   background-color: var(--grey);
   color: var(--white);
-  border: none;
+  margin-top: 10px;
   pointer-events: none;
+  text-decoration: none;
 }
