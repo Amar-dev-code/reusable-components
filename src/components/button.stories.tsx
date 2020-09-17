@@ -12,6 +12,7 @@ storiesOf("Button", module)
       type="button"
       buttonStyles="btn--success--solid"
       buttonLabel="Primary"
+      href="https://www.google.com/"
     ></Button>
   ))
   .add("Disabled", () => (
