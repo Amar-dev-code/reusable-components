@@ -41,7 +41,7 @@ export const Button = (props: buttonProps) => {
   props.disabled
     ? (checkButtonStyle = "btn--primary--disabled") &&
       (checkButtonLabel = "Disabled")
-    : (checkButtonStyle = styles[0]);
+    : checkButtonStyle;
 
   return (
     <a

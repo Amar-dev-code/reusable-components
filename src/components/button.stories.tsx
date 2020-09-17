@@ -33,6 +33,6 @@ storiesOf("Button", module)
       }}
       type="button"
       buttonStyles="btn--success--solid"
-      buttonLabel={<img src={search} alt="search"></img>}
+      buttonLabel={<img src={search} alt="search" width="20" height="20"></img>}
     ></Button>
   ));
