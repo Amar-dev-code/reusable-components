@@ -4,7 +4,16 @@ import * as React from "react";
 import { TextBox } from "./TextBox";
 
 storiesOf("TextBox", module)
-  .add("TextBox with Placeholder", () => (
-    <TextBox placeholder="Write Something"></TextBox>
+  .add("Textbox", () => (
+    <TextBox placeholder="Write Something" type="Text"></TextBox>
   ))
-  .add("Disabled Textbox", () => <TextBox isDisabled={true}></TextBox>);
+  .add("Password", () => (
+    <TextBox type="Password" placeholder="Enter Your Password"></TextBox>
+  ))
+  .add("Disabled", () => (
+    <TextBox
+      isDisabled={true}
+      type="Text"
+      placeholder="I am Disabled :("
+    ></TextBox>
+  ));
