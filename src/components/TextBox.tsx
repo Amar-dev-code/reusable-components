@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../styles/textBox.css";
 
 interface textboxProps {
@@ -7,12 +8,12 @@ interface textboxProps {
   isAutoFocus?: boolean;
   isReadonly?: boolean;
   type: "Password" | "Text";
+  value: string | number | readonly string[];
 }
 
 export function TextBox(props: textboxProps) {
   return (
     <>
-      {/* <textarea placeholder={placeholder} disabled={isDiabled}></textarea> */}
       <input
         className="primary"
         type={props.type}
@@ -20,6 +21,7 @@ export function TextBox(props: textboxProps) {
         disabled={props.isDisabled}
         autoFocus={props.isAutoFocus}
         readOnly={props.isReadonly}
+        value={props.value}
       ></input>
     </>
   );
