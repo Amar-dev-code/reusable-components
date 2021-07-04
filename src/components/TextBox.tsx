@@ -8,21 +8,18 @@ interface textboxProps {
   isAutoFocus?: boolean;
   isReadonly?: boolean;
   type: "Password" | "Text";
-  value: string | number | readonly string[];
+  value?: string | number | readonly string[];
 }
 
 export function TextBox(props: textboxProps) {
   return (
-    <>
+    <div>
       <input
-        className="primary"
-        type={props.type}
-        placeholder={props.placeholder}
+        className="inputText"
+        type="Text"
         disabled={props.isDisabled}
-        autoFocus={props.isAutoFocus}
-        readOnly={props.isReadonly}
-        value={props.value}
-      ></input>
-    </>
+      />
+      <span className="floating-label">Email address</span>
+    </div>
   );
 }

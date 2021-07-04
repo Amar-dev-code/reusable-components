@@ -2,14 +2,14 @@
   --primary: #4628ff;
   --warning: #ffd028;
   --danger: #ff2828;
-  --success: #2fff28;
+  --success: #e50914;
   --white: #f2f8f8;
   --dark: #181706;
   --grey: #808380;
 }
 
 .btn {
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   border-radius: 10px;
   cursor: pointer;
@@ -40,9 +40,9 @@
 }
 .btn--success--solid {
   background-color: var(--success);
-  color: var(--black);
-  border: 10px;
+  color: var(--white);
   text-decoration: none;
+  border-radius: 3px;
 }
 .btn--primary--outline {
   background-color: var(--primary);

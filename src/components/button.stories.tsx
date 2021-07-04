@@ -11,7 +11,7 @@ storiesOf("Button", module)
       }}
       type="button"
       buttonStyles="btn--success--solid"
-      buttonLabel="Primary"
+      buttonLabel="Sign In"
       href="https://www.google.com/"
     ></Button>
   ))

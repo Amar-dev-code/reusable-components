@@ -5,7 +5,7 @@ import { TextBox } from "./TextBox";
 
 storiesOf("TextBox", module)
   .add("Textbox", () => (
-    <TextBox placeholder="Enter username" type="Text" value=""></TextBox>
+    <TextBox placeholder="Email address" type="Text" value="" isAutoFocus={true}></TextBox>
   ))
   .add("Password", () => (
     <TextBox

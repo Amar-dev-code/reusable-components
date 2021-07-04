@@ -1,12 +1,11 @@
 .btn--small {
   padding: 5px 10px;
   font-size: 9px;
+  width:250px;
 }
 .btn--medium {
-  padding: 10px 20px;
-  font-size: 18px;
+   padding: 7px 17px;
 }
 .btn--large {
-  padding: 15px 25px;
-  font-size: 20px;
+  width:250px;
 }

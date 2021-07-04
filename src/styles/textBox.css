@@ -1,4 +1,31 @@
-.primary {
-  width: 250px;
-  height: 25px;
+
+input:focus ~ .floating-label{
+  left: 20px;
+  top: 18px;
+  transition: 0.2s ease all;
+}
+
+input:not(:focus):valid ~ .floating-label{
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+  
+}
+
+.inputText {
+  min-width: 450px;
+  height: 60px;
+  font-size: 16px;
+  text-align: start;
+  color: #000;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+}
+.floating-label{
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 18px;
+  transition: 0.2s ease all;
 }
