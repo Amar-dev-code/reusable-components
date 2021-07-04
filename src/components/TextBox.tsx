@@ -18,6 +18,7 @@ export function TextBox(props: textboxProps) {
         className="inputText"
         type="Text"
         disabled={props.isDisabled}
+        required={true}
       />
       <span className="floating-label">Email address</span>
     </div>
