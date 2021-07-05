@@ -34,9 +34,6 @@ export const Button = (props: buttonProps) => {
     : styles[0];
 
   let checkButtonLabel = props.buttonLabel;
-  let buttonSize: string = "";
-  const breakPoint = useBreakpoint();
-  breakPoint == "lg" ? (buttonSize = "btn--medium") : (buttonSize = sizes[2]);
 
   props.disabled
     ? (checkButtonStyle = "btn--primary--disabled") &&
@@ -48,7 +45,7 @@ export const Button = (props: buttonProps) => {
       href={props.href}
       onClick={props.onClick}
       type={props.type}
-      className={`btn ${buttonSize} ${checkButtonStyle}`}
+      className={`btn ${props.buttonSize} ${checkButtonStyle}`}
     >
       {checkButtonLabel}
     </a>

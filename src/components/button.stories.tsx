@@ -12,6 +12,19 @@ storiesOf("Button", module)
       type="button"
       buttonStyles="btn--success--solid"
       buttonLabel="Sign In"
+      buttonSize="btn--medium"
+      href="https://www.google.com/"
+    ></Button>
+  ))
+  .add("Large Button", () => (
+    <Button
+      onClick={() => {
+        console.log("Congrats for building your first reusbale component");
+      }}
+      type="button"
+      buttonStyles="btn--success--solid"
+      buttonLabel="Get Started >"
+      buttonSize="btn--large"
       href="https://www.google.com/"
     ></Button>
   ))
@@ -22,6 +35,7 @@ storiesOf("Button", module)
       }}
       type="button"
       buttonStyles="btn--success--solid"
+      buttonSize="btn--medium"
       buttonLabel="Primary"
       disabled={true}
     ></Button>
@@ -32,6 +46,7 @@ storiesOf("Button", module)
         console.log("Congrats for building your first reusbale component");
       }}
       type="button"
+      buttonSize="btn--medium"
       buttonStyles="btn--success--solid"
       buttonLabel={<img src={search} alt="search" width="20" height="20"></img>}
     ></Button>
